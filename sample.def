@@ -1,0 +1,21 @@
+﻿; Copyright (c) 2020 namarium
+; Licensed under the MIT License.
+; https://github.com/namarium/AviUtl_Plugin_SDK/blob/master/LICENSE
+;LIBRARY sample.auf
+
+EXPORTS
+	; フィルタプラグイン (.auf)
+	;GetFilterTable @1
+	;GetFilterTableYUY2 @2
+
+	; 入力プラグイン (.aui)
+	;GetInputPluginTable @1
+
+	; 出力プラグイン (.auo)
+	;GetOutputPluginTable @1
+
+	; 色変換プラグイン (.auc)
+	;GetColorPluginTable @1
+
+	; 言語拡張リソース (.aul)
+	; ※ インターフェースなし.
