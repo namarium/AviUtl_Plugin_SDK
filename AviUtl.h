@@ -32,8 +32,8 @@ static_assert(UNICODE, "Error: UNICODE hasn't been defined yet.");
 /// <param name="str">定数文字列</param>
 #define AU_DECLARE_CONSTANT_STRING(name, str) \
 	template<class T> constexpr T name(void); \
-	template<> constexpr wchar_t* name(void) { return L##str; } \
-	template<> constexpr char* name(void) { return str; }
+	template<> constexpr const wchar_t* name(void) { return L##str; } \
+	template<> constexpr const char* name(void) { return str; }
 
 
 /// <summary>
