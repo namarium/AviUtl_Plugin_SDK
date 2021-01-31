@@ -28,7 +28,7 @@ static_assert(UNICODE, "Error: UNICODE hasn't been defined yet.");
 /// <summary>
 /// 定数文字列 の定義マクロ
 /// </summary>
-/// <param name="name">取得関数の定義名</param>
+/// <param name="name">定義名</param>
 /// <param name="str">定数文字列</param>
 #define AU_DECLARE_CONSTANT_STRING(name, str) \
 	enum {name##ASize=sizeof(str), name##Size=sizeof(L##str)}; \
