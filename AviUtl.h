@@ -19,11 +19,11 @@ static_assert(UNICODE, "Error: UNICODE hasn't been defined yet.");
 #define AU_DECLARE_ENUMCLASS_OPERATOR(name) \
 	constexpr name operator ~ (name op) {return static_cast<name>(~static_cast<std::underlying_type<name>::type>(op));} \
 	constexpr name operator & (name l, name r) {using ty = std::underlying_type<name>::type; return static_cast<name>(static_cast<ty>(l) & static_cast<ty>(r));} \
-	name& operator&=(name& l, name r) {using ty = std::underlying_type<name>::type; l = static_cast<name>(static_cast<ty>(l) & static_cast<ty>(r)); return l;} \
+	static inline name& operator&=(name& l, name r) {using ty = std::underlying_type<name>::type; l = static_cast<name>(static_cast<ty>(l) & static_cast<ty>(r)); return l;} \
 	constexpr name operator ^ (name l, name r) {using ty = std::underlying_type<name>::type; return static_cast<name>(static_cast<ty>(l) ^ static_cast<ty>(r));} \
-	name& operator^=(name& l, name r) {using ty = std::underlying_type<name>::type; l = static_cast<name>(static_cast<ty>(l) ^ static_cast<ty>(r)); return l;} \
+	static inline name& operator^=(name& l, name r) {using ty = std::underlying_type<name>::type; l = static_cast<name>(static_cast<ty>(l) ^ static_cast<ty>(r)); return l;} \
 	constexpr name operator | (name l, name r) {using ty = std::underlying_type<name>::type; return static_cast<name>(static_cast<ty>(l) | static_cast<ty>(r));} \
-	name& operator|=(name& l, name r) {using ty = std::underlying_type<name>::type; l = static_cast<name>(static_cast<ty>(l) | static_cast<ty>(r)); return l;}
+	static inline name& operator|=(name& l, name r) {using ty = std::underlying_type<name>::type; l = static_cast<name>(static_cast<ty>(l) | static_cast<ty>(r)); return l;}
 
 /// <summary>
 /// 定数文字列 の定義マクロ
@@ -75,7 +75,7 @@ namespace AviUtl
 			/// <summary>
 			/// aviutl.exe のバージョン番号とハッシュ(SHA1)のペア
 			/// </summary>
-			std::pair<const char*, const char*> AviUtl[] =
+			static std::pair<const char*, const char*> AviUtl[] =
 			{
 				/// <summary>
 				/// version0.99k2
