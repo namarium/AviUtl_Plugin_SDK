@@ -615,7 +615,7 @@ static_assert(sizeof(void*) == 4, "Error: Architecture not targeted for build.")
 			/// <summary>
 			/// 編集ファイル名 (ファイル名が決まっていない時は何も入っていません)
 			/// </summary>
-			char* Edit_Name;
+			char* pEdit_Name;
 
 			/// <summary>
 			/// プロジェクトファイル名 (ファイル名が決まっていない時は何も入っていません)
