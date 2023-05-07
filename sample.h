@@ -5,12 +5,7 @@
 #pragma once
 
 #include "AviUtl.h"
-
-#ifdef SAMPLE_EXPORTS
 #define SAMPLE_API __declspec(dllexport)
-#else
-#define SAMPLE_API __declspec(dllimport)
-#endif
 
 /// <summary>
 /// Sample
