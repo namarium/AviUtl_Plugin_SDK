@@ -1786,6 +1786,7 @@ static_assert(sizeof(void*) == 4, "Error: Architecture not targeted for build.")
 
 			/// <summary>
 			/// フィルタ用ウィンドウメッセージ
+			/// <para>元の定義は、WM_FILTER_MAIN_???</para>
 			/// </summary>
 			enum class WindowMessage : int {
 				/// <summary>
