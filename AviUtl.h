@@ -1725,6 +1725,8 @@ static_assert(sizeof(void*) == 4, "Error: Architecture not targeted for build.")
 
 				/// <summary>
 				/// フィルタの拡張情報を設定できるようにします
+				/// <para>pInfoText を使用できるようになるフラグ</para>
+				/// <para>元の定義名は、FILTER_FLAG_EX_INFORMATION</para>
 				/// </summary>
 				ExInformation = 0x40000,
 
