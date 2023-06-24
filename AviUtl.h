@@ -3031,6 +3031,7 @@ static_assert(sizeof(void*) == 4, "Error: Architecture not targeted for build.")
 
 			/// <summary>
 			/// フラグ
+			/// <para>参照 ColorInfo::InfoFlag</para>
 			/// </summary>
 			int Flag;
 
